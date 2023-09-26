@@ -1,0 +1,87 @@
+.main {
+  display: grid;
+  height: max-content;
+  place-content: center;
+  margin-top: 20px;
+}
+table {
+  color: white;
+}
+thead td {
+  font-weight: bold;
+}
+td {
+  padding-left: 30px;
+}
+td > button {
+  font: inherit;
+  width: max-content;
+  background-color: #240370;
+  color: white;
+  border: 1px solid #240370;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  margin-left: 4px;
+}
+td > button:disabled,
+td > button:disabled:hover,
+td > button:disabled:active {
+  background-color: #ccc;
+  color: rgb(75, 75, 75);
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+td > button:hover,
+td > button:active {
+  background-color: #33059e;
+  border-color: #33059e;
+}
+@media only screen and (max-width: 900px) {
+  .main {
+    font-size: medium;
+  }
+  td {
+    padding: 5px;
+  }
+  td > button {
+    margin: 2px;
+    padding: 1px;
+    width: 60px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main {
+    font-size: small;
+  }
+  td {
+    padding: 4px;
+  }
+  td > button {
+    margin: 2px;
+    padding: 1px;
+    width: fit-content;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .main {
+    font-size: xx-small;
+  }
+  td {
+    padding: 2px;
+  }
+  td > button {
+    font-size: xx-small;
+    padding: 0;
+    width: 27px;
+    margin-left: 1px;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .main {
+    font-size: 7px;
+  }
+}
