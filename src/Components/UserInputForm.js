@@ -74,7 +74,14 @@ const UserInputForm = (props) => {
   }, [ageInputEnter, nameInputEnter, cityInputEnter, emailInputEnter, props]);
 
   const formIsValid =
-    !nameHasError && !ageHasError && !cityHasError && !emailHasError;
+    !nameHasError &&
+    !ageHasError &&
+    !cityHasError &&
+    !emailHasError &&
+    name.length !== 0 &&
+    age.length !== 0 &&
+    city.length !== 0 &&
+    email.length !== 0;
 
   const submitHandler = async (event) => {
     event.preventDefault();
